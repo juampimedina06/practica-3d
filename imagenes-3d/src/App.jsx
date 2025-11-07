@@ -15,9 +15,8 @@ useEffect(()=>{
     const scene = new THREE.Scene();
 
   //creo la camara
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000 )
-  camera.position.z = 10;
-  camera.position.y = 3;
+const camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.y = 5;
 
  
   //renderizo
@@ -53,11 +52,9 @@ useEffect(()=>{
               mixer = new THREE.AnimationMixer(modelo);
             
               gltf.animations.forEach((clip) => {
-                const action = mixer.clipAction(clip);
+                const action = mixer.clipAction(clip).play();
                 action.setLoop(THREE.LoopOnce);  
                 action.clampWhenFinished = true; 
-                action.play();   
-
               });
          }
         },
