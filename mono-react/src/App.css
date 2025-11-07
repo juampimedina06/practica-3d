@@ -1,0 +1,12 @@
+.contenedor{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+  align-items: center;
+}
+
+.titulo{
+    color: #fff;
+    font-size: 2rem;
+}
+
