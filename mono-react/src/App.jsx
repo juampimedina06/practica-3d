@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import Mono from './components/Mono';
 
 function App() {
   const myDivRef = useRef(null);
@@ -70,8 +71,9 @@ useEffect(()=>{
 
   return (
     <div className='contenedor'>
-       <h2 className='titulo'>Este es un mono 3d</h2>
-       <div className='objeto' ref={myDivRef}></div>
+       <div>
+         <Mono />
+       </div>
     </div>
   )
 }
